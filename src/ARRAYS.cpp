@@ -101,9 +101,9 @@ void ARRAYS::triple_sort(std::vector<int>& first_array, std::vector<int>& second
 
 void ARRAYS::print_avgs() {
 	
-	printf("\n\nAverage Waiting Time: %2.f", (std::accumulate(wt.begin(), wt.end(), 0)) / (float)processes);
+	printf("\n\nAverage Waiting Time: %.2f", (std::accumulate(wt.begin(), wt.end(), 0)) / (float)(processes));
 
-	printf("\nAverage Turn Arround Time: %.2f ", (std::accumulate(tat.begin(), tat.end(), 0)) / (float)processes);
+	printf("\nAverage Turn Arround Time: %.2f ", (std::accumulate(tat.begin(), tat.end(), 0)) / (float)(processes));
 }
 
 int ARRAYS::get_bt(int indice){

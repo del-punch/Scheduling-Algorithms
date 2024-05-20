@@ -173,7 +173,7 @@ int main(){
 
 		driver->find_tat();
 
-		printf("\nPROCESS\t\tARRIVAL TIME\tBURST TIME\tWAITING TIME\tTURNAROUND TIME\n\n");
+		printf("\nPROCESS\t\tBURST TIME\tARRIVAL TIME\tWAITING TIME\tTURNAROUND TIME\n\n");
 		for (int i = 0; i < processes; i++) {
 			printf("\nP%d[%d]\t\t%d\t\t%d\t\t%d\t\t%d\n\n", i + 1, driver->get_PID(i), driver->get_bt(i), driver->get_at(i), driver->get_wt(i), driver->get_tat(i));
 		}
