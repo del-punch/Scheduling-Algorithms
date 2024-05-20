@@ -8,7 +8,7 @@ SRTF::SRTF(int procesos) : ARRAYS(procesos) {}
 void SRTF::find_wt() {
 
     int complete = 0, t = 0, minm = INT_MAX;
-    int shortest = 0, _shortest = -1, finish_time;
+    int shortest = -1, _shortest = -1, finish_time;
     bool check = false;
 
     std::vector <int> remaining(processes);
@@ -18,10 +18,10 @@ void SRTF::find_wt() {
         remaining[i] = bt[i];
     }
 
-    while (complete != processes) {
+    while (complete < processes) {
+
         for (int j = 0; j < processes; j++) {
-            if ((at[j] <= t) &&
-                (remaining[j] < minm) && remaining[j] > 0) {
+            if ((at[j] <= t) && (remaining[j] < minm) && remaining[j] > 0) {
                 minm = remaining[j];
                 shortest = j;
                 check = true;
@@ -59,6 +59,7 @@ void SRTF::find_wt() {
             if (wt[shortest] < 0)
                 wt[shortest] = 0;
         }
+
         t++;
     }
 }

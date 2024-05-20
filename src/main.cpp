@@ -88,13 +88,13 @@ int main(){
 
 		for (int i = 0; i < processes; i++) {
 			if (i == 0) {
-				printf("[%d (P%d[%d]) %d]\t", 0, driver->get_ccP(i) + 1, driver->get_PID(i), driver->get_ccT(i + 1));
+				printf("[%d (P%d[%d]) %d]\t", 0, driver->get_ccP(i) + 1, driver->get_PID(i), driver->get_ccT(i+1));
 			}
 			else if (i == processes - 1) {
 				printf("[%d (P%d[%d]) %d]\t", driver->get_ccT(i), driver->get_ccP(i) + 1, driver->get_PID(i), driver->get_bt_accumulate());
 			}
 			else {
-				printf("[%d (P%d[%d]) %d]\t", driver->get_ccT(i), driver->get_ccP(i) + 1, driver->get_PID(i), driver->get_ccT(i + 1));
+				printf("[%d (P%d[%d]) %d]\t", driver->get_ccT(i), driver->get_ccP(i) + 1, driver->get_PID(i), driver->get_ccT(i+1));
 			}
 
 		}

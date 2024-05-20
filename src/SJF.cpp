@@ -17,10 +17,14 @@ void SJF::find_wt() {
 
     pair_sort(index, bt); 
 
+
+
     for (int i = 0; i < processes; i++) {
         ccP.push_back(index[i]);
-        ccT.push_back(wt[i]);
+        ccT.push_back(wt[index[i]]);
     }
+
+    pair_sort(ccT, ccP);
 
 }
 
